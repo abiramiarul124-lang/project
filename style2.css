@@ -1,0 +1,47 @@
+/* CARD AREA */
+.container1 {
+  width: 100%;
+  height: 100%;
+  perspective: 1000px;
+}
+
+/* INNER FLIP */
+.inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s ease;
+}
+
+/* FLIP EFFECT */
+.container1:hover .inner {
+  transform: rotateY(180deg);
+}
+
+
+.front,
+.back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 20px;
+  overflow: hidden;
+  backface-visibility: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* FRONT SIDE */
+.front {
+  color: white;
+  height: 100%;
+  width: 100%;
+}
+
+
+/* BACK SIDE */
+.back {
+  transform: rotateY(180deg);
+  color: white;
+}
+
